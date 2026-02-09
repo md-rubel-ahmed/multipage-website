@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:rgba(251, 255, 0, 0.445);
+}
+
+/* nav code start  */
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: hsl(51, 100%, 62%);
+    padding: 0px 100px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+     
+ }
+nav ul{
+display: flex;
+
+}
+nav ul li{
+    list-style-type: none;
+    margin: 10px 5px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 19px;
+    padding: 11px 20px;
+    transition: 0.5s;
+}
+nav ul li a:hover{
+    background-color: black;
+    color: red;
+    border-radius: 8px;
+}
+nav div{
+    color: rgb(7, 6, 6);
+    font-size: 20px;
+    transition: 0.5s;
+}
+nav div:hover{
+ background-color: rgb(22, 10, 10);
+    color: red;
+    border-radius: 10px;
+}
+
+/* nav code finesh  */
+
+
+
+#about-secton{
+    display: flex;
+    align-items: center;
+    border: 1px solid red;
+    width: 900px;
+    margin: auto;
+    margin-top: 70px;
+    padding: 50px;
+    box-shadow: 15px 15px 10px rgba(241, 14, 14, 0.801);
+    border-radius: 8px;
+    justify-content: space-between;
+    background-color:rgba(2, 6, 8, 0.87) ;
+}
+.about-img-div{
+    width: 1400px;
+}
+.about-img-div img{
+width: 100%;
+}
+.about-text-div h2{
+    font-size: 80px;
+    color: rgb(243, 243, 250);
+    margin-bottom: 20px;
+    margin-top: 100px;
+}
+.about-text-div a{
+    text-decoration: none;
+    background-color:blue;
+    color: rgb(255, 249, 249);
+    padding: 10px 25px;
+    margin-top: 50px;
+    display: inline-block;
+    border-radius: 5px;}
+    .about-text-div p{
+
+     color: white;
+    }
