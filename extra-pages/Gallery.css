@@ -1,51 +1,99 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-*{
-    margin: 0;
-    padding: 0;
+/* Navbar Desktop */
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(51, 100%, 62%);
+  padding: 10px 100px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
-/* nav code start  */
+
+nav h2 {
+  font-size: 20px;
+  color: black;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+
+  text-align: center;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px 15px;
+  transition: 0.3s;
+}
+
+.nav-menu li a:hover {
+  background-color: black;
+  color: red;
+  border-radius: 8px;
+}
+
+/* hide checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* hamburger hidden desktop */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* desktop menu */
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+/* ================= MOBILE ================= */
+@media only screen and (max-width: 940px) {
+
+  .hamburger {
+    display: block;
+    z-index: 2000;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 52px;
+  left: -100%;   /* hidden by default */
+    width: 55%;
+    height: 50%;
+    background: hsl(51, 100%, 62%);
+    flex-direction: column;
+    padding: 100px 40px;
+    gap: 25px;
+    transition:all 0.5s ease;
+  }
 
 
-nav{
-    display: flex;
-    justify-content: space-between;
-    background-color: hsl(51, 100%, 62%);
-    padding: 0px 100px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-     
- }
-nav ul{
-display: flex;
+  /* show menu when clicked */
+  #menu-toggle:checked ~ .nav-menu {
+    left: 0;
+  }
 
+#menu-toggle:checked ~ .hamburger i::before{
+    content: "\f00d";
 }
-nav ul li{
-    list-style-type: none;
-    margin: 10px 5px;
-}
-nav ul li a{
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    font-size: 19px;
-    padding: 11px 20px;
-    transition: 0.5s;
-}
-nav ul li a:hover{
-    background-color: black;
-    color: red;
-    border-radius: 8px;
-}
-nav div{
-    color: rgb(7, 6, 6);
-    font-size: 20px;
-    transition: 0.5s;
-}
-nav div:hover{
- background-color: rgb(22, 10, 10);
-    color: red;
-    border-radius: 10px;
+
 }
 
 /* nav code finesh  */
@@ -156,4 +204,69 @@ color: red;
 .previous-next-parent div a:first-child{
     background-color:  rgba(201, 221, 25, 0.74);
     color: black;
+}
+
+
+
+
+
+
+/* ================= Tablet / Medium ================= */
+@media only screen and (min-width:689px) and (max-width:1099px){
+    .main-section{
+        width: 90%;
+        padding: 30px 0;
+    }
+    .single-item-parent{
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 40px;
+        grid-column-gap: 15px;
+    }
+    .single-item{
+        height: 200px;
+    }
+    .our-section h2{
+        font-size: 32px;
+        margin-bottom: 60px;
+    }
+}
+
+/* ================= Mobile / Small ================= */
+@media only screen and (max-width:688px){
+    .main-section{
+        width: 95%;
+        padding: 20px 0;
+    }
+    .single-item-parent{
+        grid-template-columns: 1fr;
+        grid-row-gap: 30px;
+        grid-column-gap: 0;
+    }
+    .single-item{
+        height: 180px;
+    }
+    .our-section h2{
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+    .latest-text{
+        font-size: 20px;
+    }
+ 
+
+     .previous-next-parent h3 a {
+        padding: 3px 5px;             /* smaller buttons for mobile */
+        font-size: 8px;
+    }
+
+    .previous-next-parent div a {
+       
+        margin: 4px 4px;                 /* vertical spacing between page numbers */
+        padding: 4px 5px;
+        font-size: 8px;
+        border: 0.1px solid rgba(27, 29, 14, 0.74);
+    }
+
+
+
 }

@@ -4,12 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Read More Page</title>
+
+
+<style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            background-color: rgba(251, 255, 0, 0.445);
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center; /* horizontal center */
+            align-items: center;     /* vertical center */
+            padding: 20px;           /* safe padding for small screens */
+            overflow-x: hidden;       /* no horizontal scroll */
+        }
+
+        /* Wrapper handles vertical scroll only if content is taller than viewport */
+        .read-container-wrapper {
+            max-height: 90vh;        /* maximum 90% of viewport height */
+            width: 100%;
+            max-width: 700px;
+            overflow-y: auto;        /* scroll only if content too tall */
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Main content container */
+        .read-container {
+            background-color: rgb(5, 5, 5);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(189, 42, 42, 0.8);
+            padding: 40px 30px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .read-container h1 {
+            font-size: 45px;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .read-container p {
+            font-size: 20px;
+            color: white;
+            line-height: 1.7;
+        }
+
+        /* Tablet */
+        @media(max-width: 1099px){
+            .read-container{
+                padding: 30px 20px;
+            }
+            .read-container h1{
+                font-size: 35px;
+            }
+            .read-container p{
+                font-size: 18px;
+            }
+        }
+
+        /* Mobile */
+        @media(max-width: 688px){
+            .read-container{
+                padding: 20px 15px;
+            }
+            .read-container h1{
+                font-size: 28px;
+            }
+            .read-container p{
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
-<body style=" padding-top: 50px; padding-bottom: 50px; background-color:rgba(251, 255, 0, 0.445);">
-    <div style="width: 1000px; background-color:rgb(5, 5, 5) ;
-    padding: 0; border: 1px solid red;width: 700px;margin: 100px auto;  border: 1px solid red; border-radius: 10px;box-shadow: 10px 10px 10px 10px rgb(189, 42, 42);">
-        <h1 style=" width: 600px; margin: 100px auto; font-size:50px ; color: white;">Our Story & Vision</h1>
-        <p style="width: 600px;margin: 100px auto; font-size:20px ; color: white;">Founded with a love for good food, Tasty Hub Restaurant was created to bring people together through taste.
+<body>
+   <div class="read-container-wrapper">
+
+     <div class="read-container"><h1>Our Story & Vision</h1>
+        <p >Founded with a love for good food, Tasty Hub Restaurant was created to bring people together through taste.
 Our chefs use carefully selected ingredients and proven recipes to ensure quality, freshness, and satisfaction in every dish we serve.
 
 We believe that great food should be both delicious and comforting.
@@ -17,6 +98,8 @@ From our kitchen to your table, every meal is prepared with care, passion, and a
 
 Our vision is to become a favorite dining destination where guests feel welcomed, valued, and excited to return again and again.</p>
     </div>
+
+   </div>
     
 </body>
 </html>
